@@ -7,15 +7,14 @@
 #ifndef TESTER_H
 #define TESTER_H
 
-template <typename T>
-class Tester
+class TestSuite
 {
 	public:
 
 	/** @pre None
 	*   @post A testing object is created
 	*/
-	Tester();
+	TestSuite();
   
   /** @pre None
 	*   @post print out the success of tests on the linkeed list

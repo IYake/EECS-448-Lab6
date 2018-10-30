@@ -4,12 +4,12 @@
 *	@file TestSuite.hpp
 */
 
-Tester::Tester()
+TestSuite::TestSuite()
 {
     
 }
 
-void Tester::runTests()
+void TestSuite::runTests()
 {
-  
+  std::cout << "testing\n";
 }
