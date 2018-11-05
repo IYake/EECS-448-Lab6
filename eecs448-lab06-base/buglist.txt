@@ -1,0 +1,14 @@
+Functions that don't work:
+  - isEmpty()
+  - removeFront()
+  - removeBack()
+  - addFront()
+  - addBack()
+
+Best Guesses as to what the bugs are:
+  - isEmpty() always returns true
+  - removeFront() doesn't change the list
+  - removeBack() doesn't change the list
+  - addFront() adds to the back
+  - addBack() adds to the front
+  
