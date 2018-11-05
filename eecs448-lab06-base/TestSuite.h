@@ -40,6 +40,15 @@ class TestSuite
 	bool test16();
   bool test17();
 	bool test18();
+	bool test19();
+	bool test20();
+	bool test21();
+	bool test22();
+	bool test23();
+	bool test24();
+	bool test25();
+	bool test26();
+	
 
 	private:
   
