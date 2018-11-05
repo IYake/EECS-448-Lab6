@@ -28,22 +28,20 @@ void TestSuite::runTests()
   std::cout << "Test 14: removeBack after an addFront returns the true size to 0: "        << (test14() ? "PASSED" : "FAILED") << "\n";
   std::cout << "Test 15: size is 0 after an addFront and a removeFront: "                  << (test15() ? "PASSED" : "FAILED") << "\n";
   std::cout << "Test 16: size is 0 after an addFront and a removeBack: "                   << (test16() ? "PASSED" : "FAILED") << "\n";
-  std::cout << "Test 17: size is 4 after 4 addFronts: "                                    << (test17() ? "PASSED" : "FAILED") << "\n";
-  std::cout << "Test 18: size is 4 after 4 addBacks: "                                     << (test18() ? "PASSED" : "FAILED") << "\n";
-  std::cout << "Test 19: size is correct after multiple removeFronts: "                                     << (test18() ? "PASSED" : "FAILED") << "\n";
-  std::cout << "Test 20: size is correct after multiple removeBacks: "                                     << (test18() ? "PASSED" : "FAILED") << "\n";
-  
-  
-  std::cout << "Test 21: search is true for value at start of list with multiple addFronts: "   << (test19() ? "PASSED" : "FAILED") << "\n";
-  std::cout << "Test 22: search is true for value at middle of list with multiple addFronts: "  << (test20() ? "PASSED" : "FAILED") << "\n";
-  std::cout << "Test 23: search is true for value at end of list with multiple addFronts: "     << (test21() ? "PASSED" : "FAILED") << "\n";
-  std::cout << "Test 24: search is true for value at start of list with multiple addBacks: "    << (test22() ? "PASSED" : "FAILED") << "\n";
-  std::cout << "Test 25: search is true for value at middle of list with multiple addBacks: "   << (test23() ? "PASSED" : "FAILED") << "\n";
-  std::cout << "Test 26: search is true for value at end of list with multiple addBacks: "      << (test24() ? "PASSED" : "FAILED") << "\n";
-  std::cout << "Test 27: search is false looking for value in empty list: "                     << (test25() ? "PASSED" : "FAILED") << "\n";
-  std::cout << "Test 28: search is false looking for non-existent value in populated list: "    << (test26() ? "PASSED" : "FAILED") << "\n";
-  std::cout << "Test 29: search is true looking for only value in list after one addFront: "    << (test27() ? "PASSED" : "FAILED") << "\n";
-  std::cout << "Test 30: search is true looking for only value in list after one addBack: "     << (test28() ? "PASSED" : "FAILED") << "\n";
+  std::cout << "Test 17: size is correct after multiple addFronts: "                       << (test17() ? "PASSED" : "FAILED") << "\n";
+  std::cout << "Test 18: size is correct after mutiple addBacks: "                         << (test18() ? "PASSED" : "FAILED") << "\n";
+  std::cout << "Test 19: size is correct after multiple removeFronts: "                         << (test19() ? "PASSED" : "FAILED") << "\n";
+  std::cout << "Test 20: size is correct after multiple removeBacks: "                          << (test20() ? "PASSED" : "FAILED") << "\n";
+  std::cout << "Test 21: search is true for value at start of list with multiple addFronts: "   << (test21() ? "PASSED" : "FAILED") << "\n";
+  std::cout << "Test 22: search is true for value at middle of list with multiple addFronts: "  << (test22() ? "PASSED" : "FAILED") << "\n";
+  std::cout << "Test 23: search is true for value at end of list with multiple addFronts: "     << (test23() ? "PASSED" : "FAILED") << "\n";
+  std::cout << "Test 24: search is true for value at start of list with multiple addBacks: "    << (test24() ? "PASSED" : "FAILED") << "\n";
+  std::cout << "Test 25: search is true for value at middle of list with multiple addBacks: "   << (test25() ? "PASSED" : "FAILED") << "\n";
+  std::cout << "Test 26: search is true for value at end of list with multiple addBacks: "      << (test26() ? "PASSED" : "FAILED") << "\n";
+  std::cout << "Test 27: search is false looking for value in empty list: "                     << (test27() ? "PASSED" : "FAILED") << "\n";
+  std::cout << "Test 28: search is false looking for non-existent value in populated list: "    << (test28() ? "PASSED" : "FAILED") << "\n";
+  std::cout << "Test 29: search is true looking for only value in list after one addFront: "    << (test29() ? "PASSED" : "FAILED") << "\n";
+  std::cout << "Test 30: search is true looking for only value in list after one addBack: "     << (test30() ? "PASSED" : "FAILED") << "\n";
 }
 
 bool TestSuite::test1()
