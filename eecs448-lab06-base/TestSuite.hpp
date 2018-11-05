@@ -30,16 +30,20 @@ void TestSuite::runTests()
   std::cout << "Test 16: size is 0 after an addFront and a removeBack: "                   << (test16() ? "PASSED" : "FAILED") << "\n";
   std::cout << "Test 17: size is 4 after 4 addFronts: "                                    << (test17() ? "PASSED" : "FAILED") << "\n";
   std::cout << "Test 18: size is 4 after 4 addBacks: "                                     << (test18() ? "PASSED" : "FAILED") << "\n";
-  std::cout << "Test 19: search is true for value at start of list with multiple addFronts: "   << (test19() ? "PASSED" : "FAILED") << "\n";
-  std::cout << "Test 20: search is true for value at middle of list with multiple addFronts: "  << (test20() ? "PASSED" : "FAILED") << "\n";
-  std::cout << "Test 21: search is true for value at end of list with multiple addFronts: "     << (test21() ? "PASSED" : "FAILED") << "\n";
-  std::cout << "Test 22: search is true for value at start of list with multiple addBacks: "    << (test22() ? "PASSED" : "FAILED") << "\n";
-  std::cout << "Test 23: search is true for value at middle of list with multiple addBacks: "   << (test23() ? "PASSED" : "FAILED") << "\n";
-  std::cout << "Test 24: search is true for value at end of list with multiple addBacks: "      << (test24() ? "PASSED" : "FAILED") << "\n";
-  std::cout << "Test 25: search is false looking for value in empty list: "                     << (test25() ? "PASSED" : "FAILED") << "\n";
-  std::cout << "Test 26: search is false looking for non-existent value in populated list: "    << (test26() ? "PASSED" : "FAILED") << "\n";
-  std::cout << "Test 27: search is true looking for only value in list after one addFront: "    << (test27() ? "PASSED" : "FAILED") << "\n";
-  std::cout << "Test 28: search is true looking for only value in list after one addBack: "     << (test28() ? "PASSED" : "FAILED") << "\n";
+  std::cout << "Test 19: size is correct after multiple removeFronts: "                                     << (test18() ? "PASSED" : "FAILED") << "\n";
+  std::cout << "Test 20: size is correct after multiple removeBacks: "                                     << (test18() ? "PASSED" : "FAILED") << "\n";
+  
+  
+  std::cout << "Test 21: search is true for value at start of list with multiple addFronts: "   << (test19() ? "PASSED" : "FAILED") << "\n";
+  std::cout << "Test 22: search is true for value at middle of list with multiple addFronts: "  << (test20() ? "PASSED" : "FAILED") << "\n";
+  std::cout << "Test 23: search is true for value at end of list with multiple addFronts: "     << (test21() ? "PASSED" : "FAILED") << "\n";
+  std::cout << "Test 24: search is true for value at start of list with multiple addBacks: "    << (test22() ? "PASSED" : "FAILED") << "\n";
+  std::cout << "Test 25: search is true for value at middle of list with multiple addBacks: "   << (test23() ? "PASSED" : "FAILED") << "\n";
+  std::cout << "Test 26: search is true for value at end of list with multiple addBacks: "      << (test24() ? "PASSED" : "FAILED") << "\n";
+  std::cout << "Test 27: search is false looking for value in empty list: "                     << (test25() ? "PASSED" : "FAILED") << "\n";
+  std::cout << "Test 28: search is false looking for non-existent value in populated list: "    << (test26() ? "PASSED" : "FAILED") << "\n";
+  std::cout << "Test 29: search is true looking for only value in list after one addFront: "    << (test27() ? "PASSED" : "FAILED") << "\n";
+  std::cout << "Test 30: search is true looking for only value in list after one addBack: "     << (test28() ? "PASSED" : "FAILED") << "\n";
 }
 
 bool TestSuite::test1()
@@ -181,7 +185,31 @@ bool TestSuite::test18()//see if size returns 4 after 4 addBacks
   return (testableList.size() == 4);
 }
 
-bool TestSuite::test19()//see if search finds value at start of list after 4 addFronts
+bool TestSuite::test19()//see if size is correct after multiple removeFronts
+{
+  LinkedListOfInts testableList;
+  testableList.addFront(23);
+  testableList.addFront(24);
+  testableList.addFront(25);
+  testableList.addFront(26);
+  testableList.removeFront();
+  testableList.removeFront();
+  return (testableList.size() == 2);
+}
+
+bool TestSuite::test20()//see if size is correct after multiple removeBacks
+{
+  LinkedListOfInts testableList;
+  testableList.addFront(23);
+  testableList.addFront(24);
+  testableList.addFront(25);
+  testableList.addFront(26);
+  testableList.removeBack();
+  testableList.removeBack();
+  return (testableList.size() == 2);
+}
+
+bool TestSuite::test21()//see if search finds value at start of list after 4 addFronts
 {
   LinkedListOfInts testableList;
   testableList.addFront(23);
@@ -191,7 +219,7 @@ bool TestSuite::test19()//see if search finds value at start of list after 4 add
   return (testableList.search(23) == true);
 }
 
-bool TestSuite::test20()//see if search finds value at middle of list after 4 addFronts
+bool TestSuite::test22()//see if search finds value at middle of list after 4 addFronts
 {
   LinkedListOfInts testableList;
   testableList.addFront(23);
@@ -201,7 +229,7 @@ bool TestSuite::test20()//see if search finds value at middle of list after 4 ad
   return (testableList.search(24) == true);
 }
 
-bool TestSuite::test21()//see if search finds value at end of list after 4 addFronts
+bool TestSuite::test23()//see if search finds value at end of list after 4 addFronts
 {
   LinkedListOfInts testableList;
   testableList.addFront(23);
@@ -211,7 +239,7 @@ bool TestSuite::test21()//see if search finds value at end of list after 4 addFr
   return (testableList.search(26) == true);
 }
 
-bool TestSuite::test22()//see if search finds value at start of list after 4 addBacks
+bool TestSuite::test24()//see if search finds value at start of list after 4 addBacks
 {
   LinkedListOfInts testableList;
   testableList.addBack(23);
@@ -221,7 +249,7 @@ bool TestSuite::test22()//see if search finds value at start of list after 4 add
   return (testableList.search(23) == true);
 }
 
-bool TestSuite::test23()//see if search finds value at middle of list after 4 addBacks
+bool TestSuite::test25()//see if search finds value at middle of list after 4 addBacks
 {
   LinkedListOfInts testableList;
   testableList.addBack(23);
@@ -231,7 +259,7 @@ bool TestSuite::test23()//see if search finds value at middle of list after 4 ad
   return (testableList.search(24) == true);
 }
 
-bool TestSuite::test24()//see if search finds value at end of list after 4 addBacks
+bool TestSuite::test26()//see if search finds value at end of list after 4 addBacks
 {
   LinkedListOfInts testableList;
   testableList.addBack(23);
@@ -241,13 +269,13 @@ bool TestSuite::test24()//see if search finds value at end of list after 4 addBa
   return (testableList.search(26) == true);
 }
 
-bool TestSuite::test25()//see if search returns false looking through empty list
+bool TestSuite::test27()//see if search returns false looking through empty list
 {
   LinkedListOfInts testableList;
   return (testableList.search(26) == false);
 }
 
-bool TestSuite::test26()//see if search returns false looking for value not in list
+bool TestSuite::test28()//see if search returns false looking for value not in list
 {
   LinkedListOfInts testableList;
   testableList.addFront(23);
@@ -257,14 +285,14 @@ bool TestSuite::test26()//see if search returns false looking for value not in l
   return (testableList.search(35) == false);
 }
 
-bool TestSuite::test27()//see if search returns true looking for value in singly populated list after addFront
+bool TestSuite::test29()//see if search returns true looking for value in singly populated list after addFront
 {
   LinkedListOfInts testableList;
   testableList.addFront(23);
   return (testableList.search(23) == true);
 }
 
-bool TestSuite::test28()//see if search returns true looking for value in singly populated list after addBack
+bool TestSuite::test30()//see if search returns true looking for value in singly populated list after addBack
 {
   LinkedListOfInts testableList;
   testableList.addBack(23);
