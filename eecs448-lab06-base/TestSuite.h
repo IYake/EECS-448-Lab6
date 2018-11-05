@@ -48,6 +48,8 @@ class TestSuite
 	bool test24();
 	bool test25();
 	bool test26();
+	bool test27();
+	bool test28();
 	
 
 	private:
