@@ -42,6 +42,10 @@ void TestSuite::runTests()
   std::cout << "Test 28: search is false looking for non-existent value in populated list: "    << (test28() ? "PASSED" : "FAILED") << "\n";
   std::cout << "Test 29: search is true looking for only value in list after one addFront: "    << (test29() ? "PASSED" : "FAILED") << "\n";
   std::cout << "Test 30: search is true looking for only value in list after one addBack: "     << (test30() ? "PASSED" : "FAILED") << "\n";
+  std::cout << "Test 31: removeFront removes value after one addFront: "     << (test31() ? "PASSED" : "FAILED") << "\n";
+  std::cout << "Test 32: removeBack removes value after one addFront: "     << (test32() ? "PASSED" : "FAILED") << "\n";
+  std::cout << "Test 33: removeFront removes value after multiple addFronts: "     << (test33() ? "PASSED" : "FAILED") << "\n";
+  std::cout << "Test 34: removeBack removes value after multiple addFronts: "     << (test34() ? "PASSED" : "FAILED") << "\n";
 }
 
 bool TestSuite::test1()
@@ -295,6 +299,44 @@ bool TestSuite::test30()//see if search returns true looking for value in singly
   LinkedListOfInts testableList;
   testableList.addBack(23);
   return (testableList.search(23) == true);
+}
+
+bool TestSuite::test31()//see if removeFront removes the value from single linked list
+{
+  LinkedListOfInts testableList;
+  testableList.addFront(23);
+  testableList.removeFront();
+  return (!(testableList.toVector().at(0) == 23));
+}
+
+bool TestSuite::test32()//see if removeBack removes the value single linked list
+{
+  LinkedListOfInts testableList;
+  testableList.addFront(23);
+  testableList.removeBack();
+  return (!(testableList.toVector().at(0) == 23));
+}
+
+bool TestSuite::test33()//see if removeFront removes the value populated linked list
+{
+  LinkedListOfInts testableList;
+  testableList.addFront(23);
+  testableList.addFront(24);
+  testableList.addFront(25);
+  testableList.addFront(26);
+  testableList.removeFront();
+  return (!(testableList.toVector().at(0) == 26));
+}
+
+bool TestSuite::test34()//see if removeBack removes the value populated linked list
+{
+  LinkedListOfInts testableList;
+  testableList.addFront(23);
+  testableList.addFront(24);
+  testableList.addFront(25);
+  testableList.addFront(26);
+  testableList.removeBack();
+  return (!(testableList.toVector().back() == 23));
 }
 
 

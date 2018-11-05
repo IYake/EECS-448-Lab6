@@ -52,6 +52,10 @@ class TestSuite
 	bool test28();
 	bool test29();
 	bool test30();
+	bool test31();
+	bool test32();
+	bool test33();
+	bool test34();
 	
 
 	private:
