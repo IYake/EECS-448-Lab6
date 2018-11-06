@@ -42,12 +42,12 @@ void TestSuite::runTests()
   std::cout << "Test 28: search is false looking for non-existent value in populated list: "    << (test28() ? "PASSED" : "FAILED") << "\n";
   std::cout << "Test 29: search is true looking for only value in list after one addFront: "    << (test29() ? "PASSED" : "FAILED") << "\n";
   std::cout << "Test 30: search is true looking for only value in list after one addBack: "     << (test30() ? "PASSED" : "FAILED") << "\n";
-  std::cout << "Test 31: removeFront removes value after one addFront: "     << (test31() ? "PASSED" : "FAILED") << "\n";
-  std::cout << "Test 32: removeBack removes value after one addFront: "     << (test32() ? "PASSED" : "FAILED") << "\n";
-  std::cout << "Test 33: removeFront removes value after multiple addFronts: "     << (test33() ? "PASSED" : "FAILED") << "\n";
-  std::cout << "Test 34: removeBack removes value after multiple addFronts: "     << (test34() ? "PASSED" : "FAILED") << "\n";
-  std::cout << "Test 35: addFront adds correct value to front after multiple addFronts: "     << (test34() ? "PASSED" : "FAILED") << "\n";
-  std::cout << "Test 36: addBack adds correct value to back after multiple addBacks: "     << (test34() ? "PASSED" : "FAILED") << "\n";
+  std::cout << "Test 31: removeFront removes value after one addFront: "                        << (test31() ? "PASSED" : "FAILED") << "\n";
+  std::cout << "Test 32: removeBack removes value after one addFront: "                         << (test32() ? "PASSED" : "FAILED") << "\n";
+  std::cout << "Test 33: removeFront removes value after multiple addFronts: "                  << (test33() ? "PASSED" : "FAILED") << "\n";
+  std::cout << "Test 34: removeBack removes value after multiple addFronts: "                   << (test34() ? "PASSED" : "FAILED") << "\n";
+  std::cout << "Test 35: addFront adds correct value to front after multiple addFronts: "       << (test35() ? "PASSED" : "FAILED") << "\n";
+  std::cout << "Test 36: addBack adds correct value to back after multiple addBacks: "          << (test36() ? "PASSED" : "FAILED") << "\n";
 }
 
 bool TestSuite::test1()

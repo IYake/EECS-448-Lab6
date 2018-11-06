@@ -2,13 +2,11 @@ Functions that don't work:
   - isEmpty()
   - removeFront()
   - removeBack()
-  - addFront()
   - addBack()
 
 Best Guesses as to what the bugs are:
   - isEmpty() always returns true
-  - removeFront() doesn't change the list
-  - removeBack() doesn't change the list
-  - addFront() adds to the back
+  - removeFront() doesn't change the list or size
+  - removeBack() doesn't change the list or size
   - addBack() adds to the front
   
